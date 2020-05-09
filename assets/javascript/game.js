@@ -11,10 +11,12 @@ incrementButtonT1.addEventListener("click", function() {
 
   ShotsT1.innerHTML = newCounterValueT1;
 
+  if (Math.random() < 0.5) {
+
   let newgoalcounterT1= Number(goalsT1.innerHTML) + 1;
 
   goalsT1.innerHTML = newgoalcounterT1;
- 
+  }
 })
 
 
@@ -31,9 +33,12 @@ incrementButtonT2.addEventListener("click", function() {
 
   shotsT2.innerHTML = newCounterValueT2;
 
+  if (Math.random() < 0.5) {
+
   let newgoalcounterT2= Number(goalsT2.innerHTML) + 1;
 
   goalsT2.innerHTML = newgoalcounterT2;
+  }
 })
 //_______________________________________________________________________________________________________________
 let incrementButton = document.querySelector("#reset-button"); 
@@ -43,14 +48,14 @@ incrementButton.addEventListener("click", function() {
     let newCounterValue = Number(resets.innerHTML) + 1;
     resets.innerHTML = newCounterValue;
 
-    let gamerestt1 = Number(ShotsT1.innerHTML) * 0
-    ShotsT1.innerHTML = gamerestt1
-    let gamerestT1 = Number(goalsT1.innerHTML) * 0
-    goalsT1.innerHTML = gamerestT1
-    let gamerestt2 = Number(shotsT2.innerHTML) * 0
-    shotsT2.innerHTML = gamerestt2
-    let gamerestT2 = Number(goalsT2.innerHTML) * 0
-    goalsT2.innerHTML = gamerestT2
+    let gamerestt1 = Number(ShotsT1.innerHTML)
+    ShotsT1.innerHTML = 0
+    let gamerestT1 = Number(goalsT1.innerHTML)
+    goalsT1.innerHTML = 0
+    let gamerestt2 = Number(shotsT2.innerHTML)
+    shotsT2.innerHTML = 0
+    let gamerestT2 = Number(goalsT2.innerHTML)
+    goalsT2.innerHTML = 0
 
 
 })
